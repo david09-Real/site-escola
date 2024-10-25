@@ -33,11 +33,14 @@
 
         .social-icons a {
             margin: 0 10px;
+           
         }
 
         .social-icons img {
             width: 50px;
             height: 50px;
+            border: 3px solid red;
+            border-radius: 30px;
         }
 
         .logo h1 {
@@ -267,18 +270,20 @@
             margin-top: 0px;
             margin-bottom: 10px;
             width: 70vh;
-            background-color: rgb(0, 153, 153);
+            background-color: rgb(14, 102, 153);
             border-radius: 20px;
             height: 5vh;
         }
-
+        .osdois {
+            display: flex;
+            
+        
+        }
         #cor{
-            position: absolute;
+            
             width: 25px;
             height: 25px;
-            margin: 0;
-            bottom: 53vh;
-            left: 520px;
+           
            
             
             cursor: pointer;
@@ -339,14 +344,15 @@
             height: 160px;
         }
         .estrela2 img {
-            position: absolute;
+           
             width: 35px;
             height: 35px;
-            margin: 0;
-            bottom: 53vh;
-            left: 145vh;
+           
             cursor: pointer;
         }
+        .alondois {
+            display: flex;
+         }
 
         .volei {
             display: flex;
@@ -359,6 +365,7 @@
             float: right;
             border-radius: 10px;
         }
+    
 
         #voleimg {
             width: 40vh;
@@ -384,13 +391,16 @@
            margin-bottom: 7px;
         }
         .estrela3 img {
-            position: absolute;
+            
             width: 35px;
-            height: 35px;
-            margin: 0;
-            bottom: 53vh;
-            left: 199vh;
+      
             cursor: pointer;
+        }
+        .estrela3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
         }
 
         .ad {
@@ -501,18 +511,109 @@
     /* responsivo  abaixo */
 
    @media screen and (max-width: 790px) {
+          body {
+            overflow: visible;
+            max-width: none;
+          }
          .header-container{
             display: block;
+            ;
+         }
+         section .divs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+           
          }
          .divs .basquete {
-            margin-bottom: 100px;
-            margin-right: 300px;
+            
+            
+            width: 90%;
+            margin-bottom: 50px;
+         }
+
+         .basquete .img {
+            width: 100%;
+            height: 100%;
+         }
+         .img img {
+            width: 100%;
+            height: 100%;
+         }
+         .basquete button  {
+             width: 100%;
          }
          .divs .aloganmento {
-            margin-bottom: 100px;
             
+            
+            width: 90%;
+            text-align: center;
+            margin-bottom: 50px;
          }
-   }
+
+         .aloganmento img {
+            width: 90%;
+            height: 100%;
+         }
+         .aloganmento .visao {
+            width: 100%;
+            height: 100%;
+         }
+         .aloganmento .visao #infor {
+            width: 100%;
+            height: 100%;
+         }
+         .visao button {
+            width: 100%;
+         }
+         #infor button {
+           width: 100%;
+         }
+         .aloganmento .visao #alongimg {
+            height: 100%;
+            width: 100%;
+         }
+        
+         .divs .volei {
+            width: 90%;
+         }
+         .volei img {
+            width: 100%;
+         }
+         .volei #textofalse img {
+            width: 100%;
+           
+         }
+         .volei #textofalse {
+            width: 100%;
+            height: 100%;
+         }
+         .volei  #textofalse #textotrue {
+            width: 100%;
+            color: pink;
+            text-align: center;
+
+         }
+         .volei #textotrue button {
+            width: 100%;
+         }
+
+         .divs .basquete .img #cor {
+              display: none;
+         }
+         .divs .aloganmento  .visao #cor2 {
+            display: none;
+         }
+         .divs .volei #textofalse .estrela3 #cor3{
+           display: none;
+         }
+         .ad {
+            display: none;
+         }
+         }
+        
+        
+   
 
   
 
@@ -553,6 +654,9 @@
             
          }
    }
+
+  
+
 
 
    
@@ -664,9 +768,11 @@
                 <div class="img">
                     <img src="https://portalconteudoaberto.com.br/wp-content/uploads/2023/08/lebron-james-nba-recorde-1.webp" alt="" id="img1">
                     <div id="text">
+                        <div class="osdois">
                         <p>Aprenda o drible do basquete 
                             <img src="http://127.0.0.1:5500/fuck/estreva_vazia-removebg-preview.png" alt="" id="cor" onclick="estrela()">
                        </p>
+                    </div>
                         <button>Saiba mais</button>
                         
                     </div>
@@ -678,11 +784,14 @@
                     <img src="https://blog.gsuplementos.com.br/wp-content/uploads/2020/05/iStock-1209015840.jpg" alt="" id="alongimg">
                     
                     <div id="infor">
+                        <div class="alondois">
                         <p>Alongamento: Guia prático</p>
-                        <button id="alonbtn">Saiba mais</button>
+                        
                         <div class="estrela2">
                             <img src="http://127.0.0.1:5500/fuck/estreva_vazia-removebg-preview.png" alt="" id="cor2" onclick="estrela2()">
                        </div>
+                    </div>
+                       <button id="alonbtn">Saiba mais</button>
                     </div>
                    
                 </div>
@@ -691,14 +800,17 @@
             <div class="volei">
                 <div id="textofalse">
                     <img src="https://emtodolugar.facha.edu.br/wp-content/uploads/2021/07/volei.png?w=1280&h=768&crop=1" alt="" id="voleimg">
-                </div>
+             
                 <div id="textotrue">
-                    <p>Aprenda o drible do voleibol</p>
-                    <button>Saiba mais</button>
                     <div class="estrela3">
+                    <p>Aprenda o drible do voleibol</p>
+               
                         <img src="http://127.0.0.1:5500/fuck/estreva_vazia-removebg-preview.png" alt="" id="cor3" onclick="estrela3()">
                    </div>
-                </div>    
+                    <button>Saiba mais</button>
+                    
+                </div>   
+            </div> 
                 </div>
                 
             </div>
